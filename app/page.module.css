@@ -1,0 +1,11 @@
+.page {
+  background:
+    radial-gradient(circle at top, rgba(199, 126, 9, 0.2), transparent 30%),
+    linear-gradient(180deg, #090909 0%, #050505 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+.imagesContainer {
+  margin-top: 10em;
+}
