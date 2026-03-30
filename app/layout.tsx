@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/molecules/Header";
 import ScrollEffects from "@/components/molecules/ScrollEffects";
+import Footer from "@/components/molecules/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <ScrollEffects />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

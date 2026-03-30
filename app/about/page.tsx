@@ -1,7 +1,10 @@
 import styles from "./page.module.css";
+import AboutSection from "@/components/organisms/AboutSection";
 
 export default function About() {
   return (
-    <div className={styles.page}>About Page</div>
+    <>
+      <AboutSection />
+    </>
   );
 }

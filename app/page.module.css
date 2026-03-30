@@ -1,7 +1,8 @@
 .page {
-  background:
+  /* background:
     radial-gradient(circle at top, rgba(199, 126, 9, 0.2), transparent 30%),
-    linear-gradient(180deg, #090909 0%, #050505 100%);
+    linear-gradient(180deg, #090909 0%, #050505 100%); */
+  background-color: hsla(0,0%,0%,1);
   color: white;
   min-height: 100vh;
 }

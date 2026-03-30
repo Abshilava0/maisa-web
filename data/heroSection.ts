@@ -14,7 +14,7 @@ export const heroSectionData: HeroSectionData[] = [
 		description: 'Photo •  Video  •  Creative Direction',
 		link: {
 			href: '/about',
-			label: 'Portfolio',
+			label: 'About Me',
 		},
 	},
 ];

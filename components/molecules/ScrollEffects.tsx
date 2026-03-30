@@ -7,6 +7,16 @@ export default function ScrollEffects() {
   const pathname = usePathname();
 
   useEffect(() => {
+    const handlePageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    };
+    window.addEventListener('pageshow', handlePageShow);
+    return () => window.removeEventListener('pageshow', handlePageShow);
+  }, []);
+
+  useEffect(() => {
     const root = document.documentElement;
     const revealElements = Array.from(
       document.querySelectorAll<HTMLElement>('[data-reveal]')

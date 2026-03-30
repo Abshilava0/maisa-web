@@ -70,7 +70,6 @@
 
 .link:hover{
    background-color: #f0f0f0b9;
-   transform: translateY(-4px);
    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
 }
 

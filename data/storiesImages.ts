@@ -5,33 +5,33 @@ export interface StoriesImage {
 
 export const storiesImages: StoriesImage[] = [
   {
-    src: '/1A1A4682.jpg',
+    src: '/behance_project_1761478267722.jpg',
     alt: 'Off-road vehicle driving through sand',
   },
   {
-    src: '/L1040461.jpg',
+    src: '/20260318_232614 (1).jpg',
     alt: 'Hot air balloon floating above the desert',
  
   },
   {
-    src: '/lusoshi_L1020145 (1).jpg',
+    src: '/L1030326 (1).jpg',
     alt: 'Rider wearing a white helmet on a quad bike',
 
   },
   {
-    src: '/L1020716 (1).jpg',
+    src: '/L1040422.jpg',
     alt: 'Red and blue sports cars driving on a track',
 
   },
   {
-    src: '/L1040220.jpg',
-    alt: 'Night sky above a person standing near a vehicle',
- 
+    src: '/L1040436 (1).jpg',
+    alt: 'City skyline seen from above',
+    
   },
   {
-    src: '/L1020764 (1).jpg',
-    alt: 'City skyline seen from above',
-
+    src: '/L1030342.jpg',
+    alt: 'Night sky above a person standing near a vehicle',
+ 
   },
   {
     src: '/L1030641.jpg',

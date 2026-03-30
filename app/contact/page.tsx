@@ -1,7 +1,11 @@
 import styles from "./page.module.css";
+import Contact from "@/components/organisms/Contact";
 
-export default function Contact() {
+export default function ContactPage() {
   return (
-    <div className={styles.contact}>Contact Page</div>
+    <>
+      <Contact />
+    
+    </>
   );
 }
