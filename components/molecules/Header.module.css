@@ -11,7 +11,8 @@
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 10;
+   z-index: 80;
+   isolation: isolate;
    transition:
       background-color 0.35s ease,
       backdrop-filter 0.35s ease,
@@ -22,14 +23,16 @@
 .header nav {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    background: transparent !important;
    width: 100%;
-    padding-top: 52px;
+   padding-top: 24px;
+   padding-bottom: 10px;
    padding-inline: 80px;
    transition: padding 0.35s ease;
 }
 
-.header nav ul{
+.desktopList{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -39,20 +42,165 @@
    padding: 0 20px;
 }
 
-.header nav ul li{
+.desktopList li{
    cursor: pointer;
    font-weight: bold;
 }
 
-.header nav ul li a{
+.desktopList li a{
    text-decoration: none;
    color: white;
 }
 
+.desktopSocialLink {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 28px;
+   height: 28px;
+}
+
+.desktopSocialLink svg {
+   width: 100%;
+   height: 100%;
+   fill: none;
+   stroke: currentColor;
+   stroke-width: 1.7;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+}
+
+.logoLink {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}
+
 .header .logo {
    width: 200px;
+   height: auto;
    font-weight: bold;
    cursor: pointer;
+}
+
+.menuButton {
+   display: none;
+   position: relative;
+   width: 42px;
+   height: 42px;
+   padding: 0;
+   border: 0;
+   background: transparent;
+   color: white;
+   cursor: pointer;
+   z-index: 22;
+}
+
+.menuButton span {
+   position: absolute;
+   left: 7px;
+   width: 28px;
+   height: 2px;
+   background: currentColor;
+   transform-origin: center;
+   transition:
+      transform 0.28s ease,
+      opacity 0.2s ease;
+}
+
+.menuButton span:nth-child(1) {
+   top: 12px;
+}
+
+.menuButton span:nth-child(2) {
+   top: 20px;
+}
+
+.menuButton span:nth-child(3) {
+   top: 28px;
+}
+
+.header[data-menu-open='true'] .menuButton span:nth-child(1) {
+   transform: translateY(8px) rotate(45deg);
+}
+
+.header[data-menu-open='true'] .menuButton span:nth-child(2) {
+   opacity: 0;
+}
+
+.header[data-menu-open='true'] .menuButton span:nth-child(3) {
+   transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobileMenu {
+   display: none;
+}
+
+.mobileMenuInner {
+   position: relative;
+   display: grid;
+   min-height: 100dvh;
+   place-items: center;
+   padding: 6.5rem 2rem 3rem;
+}
+
+.mobileNav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1.2rem;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-align: center;
+}
+
+.mobileNav li a {
+   color: white;
+   text-decoration: none;
+   font-size: clamp(2.9rem, 12vw, 4.3rem);
+   font-weight: 700;
+   line-height: 0.96;
+   letter-spacing: -0.06em;
+   text-transform: lowercase;
+}
+
+.mobileSocials {
+   position: absolute;
+   left: 50%;
+   bottom: 2.9rem;
+   transform: translateX(-50%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1.35rem;
+   padding: 0;
+   list-style: none;
+}
+
+.mobileSocials a {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 30px;
+   height: 30px;
+   color: white;
+}
+
+.mobileSocials svg {
+   width: 100%;
+   height: 100%;
+   fill: none;
+   stroke: currentColor;
+   stroke-width: 1.7;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+}
+
+.iconFill {
+   fill: currentColor;
+   stroke: none;
 }
 
 :global(html[data-scrolled='true']) .header {
@@ -62,8 +210,8 @@
 }
 
 :global(html[data-scrolled='true']) .header nav {
-   padding-top: 28px;
-   padding-bottom: 18px;
+   padding-top: 18px;
+   padding-bottom: 12px;
 }
 
 
@@ -75,14 +223,60 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
+   .header {
+      align-items: flex-start;
+   }
+
+   .header[data-menu-open='true'] {
+      height: 100vh;
+      background: #000 !important;
+      backdrop-filter: none;
+      box-shadow: none;
+   }
+
    .header nav{
-      justify-content: center;
-      padding-inline: 50px;
+      padding-top: 18px;
+      padding-bottom: 10px;
+      padding-inline: 24px;
    }
-   .header nav ul{
+
+   .desktopList{
       display: none;
-      justify-content: center;
-      align-items: center;
    }
+
+   .logoLink {
+      position: relative;
+      z-index: 22;
+   }
+
+   .header .logo {
+      width: 132px;
+   }
+
+   .menuButton {
+      display: inline-flex;
+      margin-left: auto;
+   }
+
+   .mobileMenu {
+      position: fixed;
+      inset: 0;
+      display: block;
+      background: #000;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+         opacity 0.28s ease,
+         visibility 0.28s ease;
+      z-index: 20;
+   }
+
+   .header[data-menu-open='true'] .mobileMenu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+   }
+
 }

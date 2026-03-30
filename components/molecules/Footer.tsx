@@ -1,11 +1,10 @@
-import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.primary}>
-        <h2 className={styles.email}>CONTACT@JULIANHERBRIG.COM</h2>
+        <h2 className={styles.email}>maisuradzeesandroo@gmail.com</h2>
         <p className={styles.copy}>
           &copy;2025 Julian Herbrig Content Creation
         </p>
@@ -35,11 +34,13 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com" className={styles.link}
+            <a
+              href="https://www.tiktok.com/@sandr0a"
+              className={styles.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Youtube
+              Tiktok
             </a>
           </li>
         </ul>

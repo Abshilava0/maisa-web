@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/molecules/Header";
 import ScrollEffects from "@/components/molecules/ScrollEffects";
 import Footer from "@/components/molecules/Footer";
+import SiteToaster from "@/components/molecules/SiteToaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
 
       <body>
         <ScrollEffects />
+        <SiteToaster />
         <Header />
         {children}
         <Footer />

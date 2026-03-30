@@ -148,6 +148,12 @@
   transform: translateY(1px);
 }
 
+.button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
 @media (max-width: 980px) {
   .intro{
     margin-top: 6em;
@@ -166,6 +172,10 @@
 }
 
 @media (max-width: 640px) {
+.title {
+  margin-top: -1em;
+}
+
   .section {
     gap: 2.5rem;
     padding: 6rem 1.25rem 3rem;
@@ -179,4 +189,6 @@
   .textarea {
     padding: 0.85rem 0.9rem;
   }
+
+ 
 }

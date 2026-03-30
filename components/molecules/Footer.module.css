@@ -16,12 +16,11 @@
 
 .email {
       margin: 0;
-      max-width: 30ch;
+      max-width: 33ch;
       font-size: 28px;
       font-weight: 700;
       line-height: 0.95;
       letter-spacing: -0.04em;
-      text-transform: uppercase;
       overflow-wrap: anywhere;
 }
 
