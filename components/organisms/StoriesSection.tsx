@@ -5,9 +5,9 @@ import styles from './StoriesSection.module.css';
 import Parallax from '../molecules/Parallax';
 import Reveal from '../molecules/Reveal';
 
-export default function StoriesSection() {
+export default function StoriesSection({className}: {className?: string}) {
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${className || ''}`} >
       {stories.map((story, idx) => (
         <Reveal key={idx} className={styles.content} delay={idx * 120}>
           <h1>{story.title}</h1>

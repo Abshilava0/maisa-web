@@ -9,7 +9,7 @@ export default function Home() {
     <main className={styles.page}>
       <HeroSection />
       <ImagesContainer className={styles.imagesContainer} />
-      <StoriesSection />
+      <StoriesSection className={styles.storiesSection} />
     </main>
   );
 }
