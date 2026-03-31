@@ -155,6 +155,9 @@
 }
 
 @media (max-width: 980px) {
+  .kicker{
+    margin-top: -2em;
+  }
   .intro{
     margin-top: 6em;
   }
@@ -172,9 +175,9 @@
 }
 
 @media (max-width: 640px) {
-.title {
-  margin-top: -1em;
-}
+  .kicker{
+    margin-top: -3em;
+  }
 
   .section {
     gap: 2.5rem;
