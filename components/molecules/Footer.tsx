@@ -6,7 +6,7 @@ export default function Footer() {
       <div className={styles.primary}>
         <h2 className={styles.email}>maisuradzeesandroo@gmail.com</h2>
         <p className={styles.copy}>
-          &copy;2025 Julian Herbrig Content Creation
+          &copy;2026 Sandro Maisuradze Content Creation
         </p>
       </div>
 
